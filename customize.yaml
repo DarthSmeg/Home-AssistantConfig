@@ -1,0 +1,8 @@
+device_tracker.satan:
+  icon: mdi:bluetooth
+device_tracker.tuva_tracking:
+  icon: mdi:target
+device_tracker.trymmoblue:
+  icon: mdi:bluetooth
+device_tracker.trym_tracking:
+  icon: mdi:target

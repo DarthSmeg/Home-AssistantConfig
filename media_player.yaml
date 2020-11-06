@@ -1,0 +1,29 @@
+# Custom Pioneer config
+- platform: asyncpioneer
+  host: 192.168.1.208
+  port: 8102
+
+  # Options
+  disabled_sources:
+    - "Adapter Port"
+    - "TUNER"
+    - "FAVORITES"
+    - "INTERNET RADIO"
+    - "Kjeller"
+    - "HDMI 3"
+    - "HDMI 4"
+    - "HDMI 5"
+    - "HDMI 6/MHL"
+    - "iPod/USB"
+    - "THome"
+  zones:
+    - zone: "Zone2"
+      name: "Zone 2"
+
+# Custom Samsung TV Config
+- platform: samsungtv_tizen
+  host: 192.168.1.210
+  port: 8002
+  mac: 5c:49:7d:d1:b0:83
+  name: 'Das TV'
+  app_list: '{"Netflix": "11101200001/org.tizen.netflix-app", "Prime Video": "3201512006785/org.tizen.ignition", "YouTube": "111299001912", "Plex": "3201512006963", "Internet": "org.tizen.browser", "HBO GO": "3201706012478"}'

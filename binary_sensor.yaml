@@ -1,0 +1,45 @@
+- platform: workday
+  country: Norway
+
+- platform: bayesian
+  prior: 0.6
+  name: Tuva Presence
+  probability_threshold: 0.9
+  observations:
+  - entity_id: 'device_tracker.tuva'
+    prob_given_true: 0.9
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.satan'
+    prob_given_true: 0.9
+    prob_given_false: 0.9
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.moto_g_6_plus'
+    prob_given_true: 0.2
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+
+- platform: bayesian
+  prior: 0.6
+  name: Trym Presence
+  probability_threshold: 0.9
+  observations:
+  - entity_id: 'device_tracker.trym'
+    prob_given_true: 0.9
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.trymmoblue'
+    prob_given_true: 0.9
+    prob_given_false: 0.9
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.trymmofon'
+    prob_given_true: 0.2
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+

@@ -1,0 +1,11 @@
+- platform: spotcast
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_use_percent
+    - type: processor_use
+    - type: swap_use_percent
+    - type: load_15m
+    - type: processor_temperature

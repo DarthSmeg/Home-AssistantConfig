@@ -1,0 +1,8 @@
+trackeddevices:
+  name: Tracked Devices
+  entities:
+  - device_tracker.tarald
+  - device_tracker.jeanette
+  - device_tracker.tiril
+  - device_tracker.tuva
+  - device_tracker.trym

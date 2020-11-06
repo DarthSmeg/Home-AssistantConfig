@@ -1,0 +1,48 @@
+- platform: bluetooth_tracker
+  new_device_defaults:
+    track_new_devices: true
+
+- platform: bluetooth_le_tracker
+  new_device_defaults:
+    track_new_devices: true
+
+- platform: composite
+  name: tuva_tracking
+  time_as: utc
+  require_movement: true
+  entity_id:
+    - device_tracker.tuva
+    - device_tracker.moto_g_6_plus
+    - device_tracker.satan
+
+- platform: composite
+  name: tarald_tracking
+  time_as: device_or_local
+  require_movement: true
+  entity_id:
+    - device_tracker.tarald
+    - device_tracker.das_ifon
+    - device_tracker.das_ifon_app
+
+- platform: composite
+  name: jeanette_tracking
+  time_as: device_or_local
+  entity_id:
+    - device_tracker.jeanette
+    - device_tracker.clt_l29
+    - device_tracker.jeanettofon
+
+- platform: composite
+  name: trym_tracking
+  time_as: device_or_local
+  entity_id:
+    - device_tracker.trym
+    - device_tracker.trymmofon
+    - device_tracker.trymmoblue
+
+- platform: composite
+  name: tiril_tracking
+  time_as: device_or_local
+  entity_id:
+    - device_tracker.tiril
+    - device_tracker.motorola_one_vision
