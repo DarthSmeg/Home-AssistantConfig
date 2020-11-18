@@ -2,7 +2,7 @@
   country: Norway
 
 - platform: bayesian
-  prior: 0.6
+  prior: 0.9
   name: Tuva Presence
   probability_threshold: 0.9
   observations:
@@ -16,14 +16,14 @@
     prob_given_false: 0.9
     platform: 'state'
     to_state: 'home'
-  - entity_id: 'device_tracker.moto_g_6_plus'
+  - entity_id: 'device_tracker.tuva_gps'
     prob_given_true: 0.2
     prob_given_false: 0.1
     platform: 'state'
     to_state: 'home'
 
 - platform: bayesian
-  prior: 0.6
+  prior: 0.9
   name: Trym Presence
   probability_threshold: 0.9
   observations:
@@ -37,9 +37,71 @@
     prob_given_false: 0.9
     platform: 'state'
     to_state: 'home'
-  - entity_id: 'device_tracker.trymmofon'
+  - entity_id: 'device_tracker.trym_gps'
     prob_given_true: 0.2
     prob_given_false: 0.1
     platform: 'state'
     to_state: 'home'
 
+- platform: bayesian
+  prior: 0.9
+  name: Tiril Presence
+  probability_threshold: 0.9
+  observations:
+  - entity_id: 'device_tracker.tiril'
+    prob_given_true: 0.9
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.pippin'
+    prob_given_true: 0.9
+    prob_given_false: 0.9
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.tiril_gps'
+    prob_given_true: 0.2
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+
+- platform: bayesian
+  prior: 0.9
+  name: Jeanette Presence
+  probability_threshold: 0.9
+  observations:
+  - entity_id: 'device_tracker.jeanette'
+    prob_given_true: 1
+    prob_given_false: 0
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.jeanettofon'
+    prob_given_true: 1
+    prob_given_false: 0
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.jeanette_gps'
+    prob_given_true: 0.85
+    prob_given_false: 0.05
+    platform: 'state'
+    to_state: 'home'
+
+- platform: bayesian
+  prior: 0.9
+  name: Tarald Presence
+  probability_threshold: 0.9
+  observations:
+  - entity_id: 'device_tracker.tarald'
+    prob_given_true: 0.9
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.das_ifon'
+    prob_given_true: 0.9
+    prob_given_false: 0.9
+    platform: 'state'
+    to_state: 'home'
+  - entity_id: 'device_tracker.tarald_gps'
+    prob_given_true: 0.2
+    prob_given_false: 0.1
+    platform: 'state'
+    to_state: 'home'

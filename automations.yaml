@@ -133,9 +133,9 @@
   description: Greet Jeanette when she comes home
   trigger:
   - platform: state
-    entity_id: device_tracker.jeanette
     from: not_home
     to: home
+    entity_id: person.jeanette
   condition:
   - condition: state
     entity_id: input_boolean.welcome_greetings

@@ -10,7 +10,7 @@ zone:
   - name: home
     latitude: 59.91237713119559
     longitude: 10.599206301849337
-    radius: 33
+    radius: 40
     icon: mdi:home
 
 # Set sensible log-levels
@@ -36,8 +36,9 @@ google_assistant:
     - group
     - scene
     - script
-    - media_player
     - sensor
+# Trying to control media players through Google Assitant & via Home Assistant seems to mess things up
+#    - media_player
 
 # Control Spotify
 spotify:
