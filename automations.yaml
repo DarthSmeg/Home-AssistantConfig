@@ -280,3 +280,48 @@
       entity_id: media_player.livingroom_hub
       message: Welcome master Kent. I expect there will be fun and games now
   mode: single
+- id: '1610014036256'
+  alias: TV Surround
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.das_tv
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.turn_on
+    data: {}
+    entity_id: media_player.pioneer_avr
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.pioneer_avr
+      source: Optical
+    entity_id: media_player.das_tv
+  mode: single
+- id: '1610016789987'
+  alias: TV Surround Off
+  description: When turning off TV
+  trigger:
+  - platform: state
+    entity_id: media_player.das_tv
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: media_player.turn_off
+    data: {}
+    entity_id: media_player.pioneer_avr
+  mode: single
+- id: '1610405925345'
+  alias: Evening
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:30'
+  condition: []
+  action:
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.tradfri_outlet
+  mode: single

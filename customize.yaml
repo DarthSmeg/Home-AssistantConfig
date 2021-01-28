@@ -32,3 +32,7 @@ device_tracker.jeanette_tracking:
   icon: mdi:target
 device_tracker.unifi_fa_28_fe_40_4d_98_default:
   friendly_name: trym_bt
+media_player.pioneer_avr_zone2:
+  friendly_name: Pioneer Zone2
+media_player.pioneer_avr:
+  friendly_name: Pioneer Main

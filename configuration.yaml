@@ -1,4 +1,4 @@
-### General Configuration for Home Assistant
+### General Configuration for Home Assistant ###
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -13,15 +13,32 @@ zone:
     radius: 40
     icon: mdi:home
 
+### Logging options ###
+# Set the DB recorder variables
+recorder:
+  db_url: !secret mariadb_connection_url
+  commit_interval: 30
+  auto_purge: true
+  purge_keep_days: 7
+  exclude:
+    domains:
+      - updater
+    entity_globs:
+      - sensor.weather_*
+      - sensor.*_uptime
+      - sensor.uptime*
+    entities:
+      - sun.sun # Don't record sun data
+      - sensor.date
+      - sensor.chromecast_devices
+
 # Set sensible log-levels
 logger:
   default: info
   logs:
-    # custom_components.asyncpioneer.media_player: error
-     asyncpioneer: critical
-    # pioneer: critical
+    homeassistant.components.tradfri: debug
 
-### Integrations
+### Integrations ###
 # Text to speech
 tts:
   - platform: google_translate
@@ -30,15 +47,13 @@ tts:
 google_assistant:
   project_id: home-assistant-d3da4
   service_account: !include SERVICE_ACCOUNT.JSON
-  report_state: true
+  report_state: false
   exposed_domains: 
     - switch
     - group
     - scene
     - script
     - sensor
-# Trying to control media players through Google Assitant & via Home Assistant seems to mess things up
-#    - media_player
 
 # Control Spotify
 spotify:
